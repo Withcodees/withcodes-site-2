@@ -58,6 +58,9 @@
     section, header{
         padding: 2rem;
     }
+    .swiper-slide{
+        height: 250px;
+    }
 
 }
 
