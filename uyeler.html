@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Ekibimiz</title>
+
+    <!-- Font-Awesome CSS -->
+    <link rel="stylesheet" href="portfolyocss/assets/vendors/font-awesome/css/all.min.css" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="portfolyocss/assets/vendors/swiper/swiper.css" />
+
+    <!-- Magnific-Popup CSS -->
+    <link rel="stylesheet" href="portfolyocss/assets/vendors/magnific-popup/magnific-popup.css" />
+
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="portfolyocss/assets/css/main.css" />
+    <link rel="stylesheet" href="portfolyocss/assets/css/responsive.css" />
+
+</head>
+
+<body>
+    <section class="testimonial" id="testimonial">
+
+        <div class="heading">
+            <h2>EKİBİMİZ</h2>
+        </div>
+
+        <div class="swiper-container testimonial-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-2.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Şahin Tüter </h3>
+                        <h5>Founder</h5>
+                        <h5>.Net</h5>
+                    </div>
+                    <p class="comment"> 
+                        Uzun süre .Net ile uğraşıp şu sıralar Flutter kodluyor ama .Net tarafını birakmam diyor. <br>
+                    </p>
+
+                </div>
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-5.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Coder Kız</h3>
+                        <h5>Co - Founder</h5>
+                        <h5>Oyun Geliştirme</h5>
+                    </div>
+                    <p class="comment">
+                        C# ile büyüyen bu ablamız VR oyun yapmaya merak salmış durumda. Sonucu biz de merak ediyoruz.
+                    </p>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-1.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Berfin Baki</h3>
+                        <h5>Co - Founder</h5>
+                        <h5>web Developer</h5>
+                    </div>
+                    <p class="comment">
+                        JavaScript onun başının belası ama vazgeçmiyor.
+                    </p>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-3.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Burak Felek</h3>
+                        <h5>Python Developer</h5>
+                    </div>
+                    <p class="comment">
+                        Her projeyi Python ile tek başına yazmak istiyor. Bu konuda çok bencil.
+                    </p>
+                </div>
+
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-5.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Abdullah Dinler</h3>
+                        <h5>.Net</h5>
+                    </div>
+                    <p class="comment">
+                        Tam bir C# aşığı. O olmadan yaşayamam diyor ama C# onun için aynı şeyleri düşünüyor mu bilemeyiz
+                    </p>
+                </div>
+                <div class="swiper-slide testi-item">
+                    <img src="portfolyocss/assets/images/Testimonials/pic-5.png" alt="Testimonial-Pic" />
+                    <div class="intro">
+                        <h3>Berk Karabulut</h3>
+                        <h5>Oyun gelişme</h5>
+                    </div>
+                    <p class="comment">
+                        Hangi alanla uğraştığını kendisi de bilmiyor ama oyun yapmayı seviyor.
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination1"></div>
+        </div>
+    </section>
+
+    <!-- JQuery -->
+    <script src="portfolyocss/assets/vendors/jquery/jquery-3.6.0.js"></script>
+
+    <!-- SWIPER JS -->
+    <script src="portfolyocss/assets/vendors/swiper/swiper.js"></script>
+
+    <!-- Magnific-Popup JS -->
+    <script src="portfolyocss/assets/vendors/magnific-popup/jquery.magnific-popup.js"></script>
+
+    <!-- Typed JS -->
+    <script src="portfolyocss/assets/vendors/typed/typed.js"></script>
+
+    <!-- Custom Script File -->
+    <script src="portfolyocss/assets/js/script.js"></script>
+    <script src="portfolyocss/assets/js/scroll-spy.js"></script>
+    <script src="portfolyocss/assets/js/counter-up.js"></script>
+    <script src="portfolyocss/assets/js/portfolio.js"></script>
+    <script src="portfolyocss/assets/js/testi-slider.js"></script>
+    <script src="portfolyocss/assets/js/blog-slider.js"></script>
+
+    <!---------------- Custom Script ---------------->
+
+    <!-- Typed Script -->
+    <script>
+        var typed = new Typed('.typing-text', {
+
+            strings: ['Web developer', 'web designer', 'photographer', 'graphic designer'],
+            typeSpeed: 120,
+            loop: true
+        });
+    </script>
+
+    <!-- Contact-Form Script -->
+    <script>
+        jQuery('#contactUs-Form').on('submit', function (e) {
+            jQuery('#msg').html('');
+            jQuery('#submit').html('Please wait');
+            jQuery('#submit').attr('disabled', true);
+            jQuery.ajax({
+                url: '/portfolyocss/assets/php/submit.php',
+                type: 'post',
+                data: jQuery('#contactUs-Form').serialize(),
+                success: function (result) {
+                    jQuery('#msg').html(result);
+                    jQuery('#submit').html('Submit');
+                    jQuery('#submit').attr('disabled', false);
+                    jQuery('#contactUs-Form')[0].reset();
+                }
+            });
+            e.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>
