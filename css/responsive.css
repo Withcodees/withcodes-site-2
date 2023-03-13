@@ -102,10 +102,11 @@
     }
 
     .info_section .row>div {
-        text-align: center;
-        display: flex;
+        text-align: left;
+        /* display: flex; */
         flex-direction: column;
         align-items: center;
+        margin-left: 10px;
 
     }
 
@@ -114,6 +115,12 @@
         padding: 45px 0;
 
     }
+    .heading_container h2{
+        text-align: center;
+        font-size: larger;
+        padding: 20px;
+    }
+    
 }
 
 @media (max-width: 576px) {
@@ -143,12 +150,22 @@
         padding: 25px 0;
 
     }
+    .navbar-brand img{
+        width: 200px;
+        height: 100px;
+    }
+    /* .detail-box{
+        width:50%;
+    } */
 
 }
 
 @media (max-width: 480px) {
     .slider_section .detail-box h1 {
         font-size: 3.5rem;
+    }
+    .detail-box{
+        width:100%;
     }
 }
 
